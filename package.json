@@ -1,0 +1,25 @@
+{
+  "name": "hardhat-project-with-circom",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Doris Benda",
+  "description": "Hardhat and circom circuits",
+  "scripts": {
+    "circom:dev": "hardhat circom --deterministic --debug --verbose",
+    "circom:prod": "hardhat circom --verbose"
+  },
+  "dependencies": {
+    "@iden3/contracts": "1.4.3",
+    "circomlib": "2.0.5",
+    "circomlibjs": "0.1.7",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.19.0",
+    "hardhat-circom": "^3.3.2",
+    "typechain": "^8.3.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "yarn@4.0.2"
+}
