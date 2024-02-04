@@ -10,14 +10,19 @@
   },
   "dependencies": {
     "@iden3/contracts": "1.4.3",
-    "circomlib": "2.0.5",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "circomlib": "^2.0.5",
     "circomlibjs": "0.1.7",
     "dotenv": "^16.3.1",
+    "ethers": "^6.10.0",
     "hardhat": "^2.19.0",
     "hardhat-circom": "^3.3.2",
+    "hardhat-deploy": "^0.11.45",
+    "snarkjs": "^0.7.3",
     "typechain": "^8.3.2"
   },
   "devDependencies": {
+    "@types/snarkjs": "^0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },

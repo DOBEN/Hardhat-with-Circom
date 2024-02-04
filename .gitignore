@@ -3,17 +3,26 @@ node_modules
 .DS_Store
 .yarn
 
-# Hardhat files
+# Hardhat and circom files
 cache
-artifacts
+circuits/output
 coverage.json
 coverage
+contracts/
+artifacts/*
+
+# powers of tau file (circom files from the trusted setup ceremony)
+*.ptau
 
 # Typechain generated files
 generated-types
 
-# Hardhat migrate
-.storage.json
+# Keep all output, smart contract, and artifact files related to the `division` circuit
+# to have one example of how correct compilation and contracts should look.
+!artifacts/circom
+artifacts/circom/*
+!artifacts/circom/division.*
+!circuits/output/division.*
+!contracts/DivisionVerifier.sol
 
-# power of tau files
-*.ptau
+
