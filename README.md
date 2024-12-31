@@ -9,7 +9,7 @@ The project uses the `hardhat-circom` plugin. This combines the multiple steps o
 - `Circom` and `snarkjs` installed:
     https://docs.circom.io/getting-started/installation/
 
-- Powers of tau files: The `Goth16` (zkSNARK) algorithm relies on a trusted setup ceremony. To speed up development, get the `powersOfTau28_hez_final_15.ptau` file at https://www.dropbox.com/sh/mn47gnepqu88mzl/AACaJkBU7mmCq8uU8ml0-0fma?dl=0 and input it into the `circuits` folder. In addition, the `circom:dev` command in the `package.json` file is executed with the `--deterministic` option to avoid unnecessary file changes during development. In production, you have to generate your own `powersOfTau` file and execute both phases of the [powers of tau ceremony](https://docs.circom.io/getting-started/proving-circuits/#powers-of-tau). In addition, use the `circom:prod` command in the `package.json` file in production.
+- Powers of tau files: The `Groth16` (zkSNARK) algorithm relies on a trusted setup ceremony. To speed up development, get the `powersOfTau28_hez_final_15.ptau` file at https://www.dropbox.com/sh/mn47gnepqu88mzl/AACaJkBU7mmCq8uU8ml0-0fma?dl=0 and input it into the `circuits` folder. In addition, the `circom:dev` command in the `package.json` file is executed with the `--deterministic` option to avoid unnecessary file changes during development. In production, you have to generate your own `powersOfTau` file and execute both phases of the [powers of tau ceremony](https://docs.circom.io/getting-started/proving-circuits/#powers-of-tau). In addition, use the `circom:prod` command in the `package.json` file in production.
 
 Use at least node version v18.16.0.
 
@@ -54,7 +54,7 @@ yarn snarkjs groth16 verify ./artifacts/circom/CircuitName.vkey.json ./artifacts
 
 e.g.
 ```
-yarn snarkjs groth16 verify ./artifacts/circom/division.vkey.json ./artifacts/circom/division.fake_public.json ./artifacts/circom/division.proof.json
+yarn snarkjs groth16 verify ./artifacts/circom/division.vkey.json ./artifacts/circom/division.public.json ./artifacts/circom/division.proof.json
 ```
 
 It will return:
